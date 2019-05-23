@@ -53,4 +53,13 @@ export class ContractBasedAccount extends Entity {
   set owner(value: Bytes) {
     this.set("owner", Value.fromBytes(value));
   }
+
+  get timeCreated(): BigInt {
+    let value = this.get("timeCreated");
+    return value.toBigInt();
+  }
+
+  set timeCreated(value: BigInt) {
+    this.set("timeCreated", Value.fromBigInt(value));
+  }
 }
