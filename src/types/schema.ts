@@ -44,4 +44,13 @@ export class ContractBasedAccount extends Entity {
   set id(value: string) {
     this.set("id", Value.fromString(value));
   }
+
+  get owner(): Bytes {
+    let value = this.get("owner");
+    return value.toBytes();
+  }
+
+  set owner(value: Bytes) {
+    this.set("owner", Value.fromBytes(value));
+  }
 }

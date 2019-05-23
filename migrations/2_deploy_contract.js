@@ -1,5 +1,5 @@
-const ProxyFactory = artifacts.require("./ProxyFactory.sol");
+const WalletFactory = artifacts.require("./WalletFactory.sol");
 
 module.exports = async function(deployer) {
-  await deployer.deploy(ProxyFactory);
+  await deployer.deploy(WalletFactory);
 };
