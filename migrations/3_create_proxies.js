@@ -1,8 +1,8 @@
-// const ProxyFactory = artifacts.require('./ProxyFactory.sol')
+// const WalletFactory = artifacts.require('./WalletFactory.sol')
 
 // // TODO: Use the proxy factory here
 // module.exports = async function(deployer) {
-//   const registry = await ProxyFactory.deployed()
+//   const registry = await WalletFactory.deployed()
 
 //   console.log('Account address:', registry.address)
 

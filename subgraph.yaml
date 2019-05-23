@@ -1,15 +1,15 @@
 specVersion: 0.0.1
-description: Gnosis Safe
-repository: https://github.com/tasitlabs/gnosis-safe-subgraph
+description: Argent
+repository: https://github.com/tasitlabs/argent-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: ProxyFactory
+    name: WalletFactory
     network: mainnet
     source:
-      address: "0x12302fE9c02ff50939BaAaaf415fc226C078613C"
-      abi: ProxyFactory
+      address: "0x851cC731ce1613AE4FD8EC7F61F4B350F9CE1020"
+      abi: WalletFactory
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.2
@@ -17,9 +17,9 @@ dataSources:
       entities:
         - ContractBasedAccount
       abis:
-        - name: ProxyFactory
-          file: ./abis/ProxyFactory.json
+        - name: WalletFactory
+          file: ./abis/WalletFactory.json
       eventHandlers:
-        - event: ProxyCreation(address)
-          handler: handleNewProxy
+        - event: WalletCreated(address,address)
+          handler: handleNewWallet
       file: ./src/mapping.ts
