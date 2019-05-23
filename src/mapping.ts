@@ -6,5 +6,6 @@ export function handleNewWallet(event: WalletCreated): void {
     event.params._wallet.toHex()
   );
   contractBasedAccount.owner = event.params._owner;
+  contractBasedAccount.timeCreated = event.block.timestamp;
   contractBasedAccount.save();
 }
